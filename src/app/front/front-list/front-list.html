@@ -1,0 +1,9 @@
+<h2>Liste des musées</h2>
+
+<div class="row">
+  @for (m of musees; track $index) {
+    <div class="col-md-4">
+      <app-musee-enfant [musee]="m"></app-musee-enfant>
+    </div>
+  }
+</div>

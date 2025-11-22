@@ -1,0 +1,31 @@
+/* Glassmorphism weather card */
+.weather-card {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.25);      /* transparent glass */
+  backdrop-filter: blur(12px);                /* frosted effect */
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3); /* soft border */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);  /* smooth shadow */
+  transition: 0.3s ease;
+}
+
+/* Optional hover effect for elegance */
+.weather-card:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Beautify the text slightly */
+.weather-card p {
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.weather-card h4 {
+  letter-spacing: 0.5px;
+}

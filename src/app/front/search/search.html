@@ -1,0 +1,23 @@
+<h2>Recherche</h2>
+
+<div class="row mb-3">
+  <div class="col-md-4">
+    <input class="form-control" [(ngModel)]="nom" placeholder="Nom...">
+  </div>
+
+  <div class="col-md-4">
+    <input type="number" class="form-control" [(ngModel)]="maxPrix" placeholder="Prix max">
+  </div>
+
+  <div class="col-md-4">
+    <button class="btn btn-primary w-100" (click)="search()">Rechercher</button>
+  </div>
+</div>
+
+<div class="row">
+  @for (m of results; track $index) {
+    <div class="col-md-4">
+      <app-musee-enfant [musee]="m"></app-musee-enfant>
+    </div>
+  }
+</div>

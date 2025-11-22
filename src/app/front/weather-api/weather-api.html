@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center">
+  <div class="weather-card card shadow-sm p-4 mb-5">
+
+    <div class="text-center mb-3">
+      <h4 class="fw-bold">Météo à Tunis</h4>
+
+      @if (weather) {
+        <img 
+          [src]="weather.current_weather.is_day ? 'sun.png' : 'moon.png'" 
+          width="70"
+          class="my-3"
+        >
+      }
+    </div>
+
+    @if (weather) {
+      <p><strong>Température :</strong> {{ weather.current_weather.temperature }} °C</p>
+      <p><strong>Vent :</strong> {{ weather.current_weather.windspeed }} km/h</p>
+      <p><strong>Direction du vent :</strong> {{ weather.current_weather.winddirection }}°</p>
+      <p><strong>Jour/Nuit :</strong> {{ weather.current_weather.is_day ? 'Jour' : 'Nuit' }}</p>
+      <p><strong>Dernière mise à jour :</strong> {{ weather.current_weather.time | date:'short' }}</p>
+    }
+  </div>
+</div>

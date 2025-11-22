@@ -1,0 +1,174 @@
+{
+  "musees": [
+    {
+      "id": "m1",
+      "nom": "L'Antiquarium d'Utique",
+      "localisation": "Utique",
+      "photo": "utique.jpg",
+      "dateOuverture": "1990",
+      "ouvert": true,
+      "prixEntree": "2.10",
+      "description": "est le musée archéologique du site antique d'Utique, en Tunisie, qui expose une collection d'artefacts puniques et romains.",
+      "commentaires": [
+        {
+          "nom": "Achraf",
+          "message": "Super musee",
+          "date": "2022-01-01"
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "nom": "Musée national de Carthage",
+      "localisation": "Carthage",
+      "photo": "Carthage.jpg",
+      "dateOuverture": "1875",
+      "ouvert": false,
+      "prixEntree": 12,
+      "description": " C'est l'un des deux principaux musées archéologiques de Tunisie avec le musée national du Bardo.",
+      "commentaires": [
+        {
+          "nom": "Youssef",
+          "message": "chargé d'histoire",
+          "date": "2025-10-10"
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "nom": "Musée du Bardo",
+      "localisation": "Tunis",
+      "photo": "bardo.jpg",
+      "dateOuverture": "1888-05-07",
+      "ouvert": true,
+      "prixEntree": 12,
+      "description": "Le plus grand musée de Tunisie, célèbre pour ses mosaïques romaines.",
+      "commentaires": [
+        {
+          "nom": "Amira",
+          "message": "Collections incroyables!",
+          "date": "2024-11-01"
+        }
+      ]
+    },
+    {
+      "id": "m4",
+      "nom": "Musée archéologique d'El Jem",
+      "localisation": "El Jem",
+      "photo": "jem.jpg",
+      "dateOuverture": "1970-01-01",
+      "ouvert": true,
+      "prixEntree": 8,
+      "description": "À proximité de l'amphithéâtre, riche en mosaïques et statues.",
+      "commentaires": [
+        {
+          "nom": "Aziz",
+          "message": "Musee magnifique",
+          "date": "2025-06-01"
+        }
+      ]
+    },
+    {
+      "id": "m5",
+      "nom": "Musée archéologique de Kerkouane",
+      "localisation": "Nabeul",
+      "photo": "Kerkouane.jpg",
+      "dateOuverture": "1987",
+      "ouvert": true,
+      "prixEntree": "12",
+      "description": "présente des objets découverts sur place comme des céramiques, des sculptures, des bijoux et des brûle-parfums.",
+      "commentaires": [
+        {
+          "nom": "Ahmed",
+          "message": "Collection magnifique",
+          "date": "2024-08-04"
+        },
+        {
+          "nom": "Achraf",
+          "message": "Super musee",
+          "date": "2022-01-01"
+        }
+      ]
+    },
+    {
+      "id": "m6",
+      "nom": "Musée Archéologique de Sousse",
+      "localisation": "Sousse",
+      "photo": "Sousse.jpg",
+      "dateOuverture": "1897",
+      "ouvert": true,
+      "prixEntree": 11,
+      "description": "Le Musée Archéologique de Sousse, situé dans l'enceinte de la Kasbah, est réputé pour abriter la deuxième plus grande collection de mosaïques romaines de Tunisie, après celle du musée national du Bardo.",
+      "commentaires": [
+        {
+          "nom": "Aymen",
+          "message": "Absolument magnifique ! Les mosaïques sont incroyables et la vue depuis la Kasbah vaut le détour. Un incontournable de Sousse.",
+          "date": "2025-05-08"
+        }
+      ]
+    },
+     {
+      "id": "m7",
+      "nom": "Musée de Mahdia",
+      "localisation": "Mahdia",
+      "photo": "Mahdia.jpg",
+      "dateOuverture": "1990",
+      "ouvert": true,
+      "prixEntree": 7,
+      "description": "Présente des artefacts sous-marins, des objets puniques et des trouvailles du célèbre épave de Mahdia.",
+      "commentaires": [
+        {
+          "nom": "Sana",
+          "message": "Très intéressant, surtout la partie dédiée à l'épave !",
+          "date": "2023-03-12"
+        }
+      ]
+    },
+    {
+      "id": "m8",
+      "nom": "Musée de Sfax",
+      "localisation": "Sfax",
+      "photo": "sfax.png",
+      "dateOuverture": "1905",
+      "ouvert": true,
+      "prixEntree": 5,
+      "description": "Installé dans la médina, il expose des poteries, mosaïques et objets artisanaux de la région sfaxienne.",
+      "commentaires": [
+        {
+          "nom": "Nader",
+          "message": "Un musée authentique au cœur de la médina.",
+          "date": "2024-09-21"
+        }
+      ]
+    },
+    {
+      "id": "m9",
+      "nom": "Musée de Douz",
+      "localisation": "Douz",
+      "photo": "douz.jpg",
+      "dateOuverture": "1997",
+      "ouvert": true,
+      "prixEntree": 6,
+      "description": "Musée dédié à la culture saharienne, aux traditions bédouines et à l'écosystème désertique du sud tunisien.",
+      "commentaires": [
+        {
+          "nom": "Marwen",
+          "message": "Superbe musée qui raconte vraiment l'histoire du désert.",
+          "date": "2024-12-05"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "A1",
+      "username": "admin1",
+      "password": "admin1"
+    },
+    {
+      "id": "A2",
+      "username": "admin2",
+      "password": "admin2"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<h2>Liste des musées (Admin)</h2>
+
+<input 
+  type="text"
+  class="form-control mb-3"
+  placeholder="Rechercher..."
+  [(ngModel)]="searchTerm"
+  (input)="filterMusees()"
+/>
+
+<select class="form-select mb-3" [(ngModel)]="sortOption" (change)="sortMusees()">
+  <option value="none">-- Trier --</option>
+  <option value="nameAsc">Nom (A → Z)</option>
+  <option value="nameDesc">Nom (Z → A)</option>
+  <option value="priceAsc">Prix (croissant)</option>
+  <option value="priceDesc">Prix (décroissant)</option>
+</select>
+
+<a routerLink="/admin/add" class="btn btn-success mb-3">➕ Ajouter un musée</a>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Localisation</th>
+      <th>Prix</th>
+      <th>Ouvert</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (m of musees; track m.id) {
+      <tr>
+        <td>{{ m.nom }}</td>
+        <td>{{ m.localisation }}</td>
+        <td>{{ m.prixEntree | price}}</td>
+        <td>{{ m.ouvert ? 'Oui' : 'Non' }}</td>
+
+        <td>
+          <button routerLink="/admin/edit/{{ m.id }}" class="btn btn-primary btn-sm">
+            Modifier
+          </button>
+
+          <button class="btn btn-danger btn-sm ms-2" (click)="delete(m.id)">
+            Supprimer
+          </button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

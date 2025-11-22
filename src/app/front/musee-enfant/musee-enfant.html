@@ -1,0 +1,12 @@
+<div class="card shadow-sm mb-3" [class.border-success]="musee.ouvert">
+  <img [src]="musee.photo" class="card-img-top" alt="photo">
+
+  <div class="card-body">
+    <h5 class="card-title">{{ musee.nom }}</h5>
+    <p class="card-text">{{ musee.description | slice:0:80 }}...</p>
+
+    <button class="btn btn-primary" [routerLink]="['/musee', musee.id]">
+      Détails
+    </button>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+<h2>Ajouter un musée</h2>
+
+<form [formGroup]="museeForm" (ngSubmit)="submit()">
+
+  <div class="mb-3">
+    <label>Nom</label>
+    <input class="form-control" formControlName="nom">
+  </div>
+
+  <div class="mb-3">
+    <label>Localisation</label>
+    <input class="form-control" formControlName="localisation">
+  </div>
+
+  <div class="mb-3">
+    <label>Photo (URL)</label>
+    <input class="form-control" formControlName="photo">
+  </div>
+
+  <div class="mb-3">
+    <label>Date d'ouverture</label>
+    <input type="date" class="form-control" formControlName="dateOuverture">
+  </div>
+
+  <div class="mb-3">
+    <label>Ouvert ?</label>
+    <input type="checkbox" formControlName="ouvert">
+  </div>
+
+  <div class="mb-3">
+    <label>Prix d'entrée</label>
+    <input type="number" class="form-control" formControlName="prixEntree">
+  </div>
+
+  <div class="mb-3">
+    <label>Description</label>
+    <textarea class="form-control" formControlName="description"></textarea>
+  </div>
+
+  <h4>Commentaires</h4>
+
+  <div formArrayName="commentaires">
+    @for (c of commentaires.controls; let i = $index; track i) {
+      <div [formGroupName]="i" class="border p-2 mb-2">
+
+        <label>Nom</label>
+        <input class="form-control" formControlName="nom">
+
+        <label>Message</label>
+        <input class="form-control" formControlName="message">
+
+        <button
+          type="button"
+          class="btn btn-danger mt-2"
+          (click)="removeCommentaire(i)"
+        >
+          Supprimer commentaire
+        </button>
+
+      </div>
+    }
+  </div>
+
+  <button
+    type="button"
+    class="btn btn-secondary mt-2"
+    (click)="addCommentaire()"
+  >
+    Ajouter un commentaire
+  </button>
+
+  <br><br>
+
+  <button class="btn btn-success" type="submit">Enregistrer</button>
+
+</form>

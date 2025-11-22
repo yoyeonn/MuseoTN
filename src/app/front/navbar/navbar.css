@@ -1,0 +1,47 @@
+.modern-navbar {
+  background: linear-gradient(135deg, #3fa9f5, #6ecbff) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 15px rgba(0, 140, 255, 0.25);
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.nav-modern {
+  position: relative;
+  color: #f0f8ff !important;
+  padding: 8px 14px !important;
+  transition: 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-modern:hover {
+  color: white !important;
+}
+
+.nav-modern::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  transition: 0.25s ease-in-out;
+  border-radius: 10px;
+}
+
+.nav-modern:hover::after {
+  width: 100%;
+}
+
+.logout-link {
+  color: #ff2f2f !important;
+}
+
+.logout-link:hover {
+  color: #ff6666 !important;
+}

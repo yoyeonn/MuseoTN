@@ -1,0 +1,40 @@
+<h2 class="mb-4">Tableau de bord</h2>
+
+<div class="row g-4">
+
+  <div class="col-md-4">
+    <div class="card p-3 shadow-sm text-center">
+      <h4>Total Musées</h4>
+      <h2 class="text-primary">{{ totalMusees }}</h2>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card p-3 shadow-sm text-center">
+      <h4>Total Commentaires</h4>
+      <h2 class="text-success">{{ totalCommentaires }}</h2>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card p-3 shadow-sm text-center">
+      <h4>Prix Moyen</h4>
+      <h2 class="text-warning">{{ avgPrice | number:'1.0-2' }} DT</h2>
+    </div>
+  </div>
+
+</div>
+
+<hr class="my-4">
+
+<h3>Actions rapides</h3>
+
+<div class="d-flex gap-3">
+
+  <a routerLink="list" class="btn btn-primary btn-lg">📄 Liste des musées</a>
+
+  <a routerLink="add" class="btn btn-success btn-lg">➕ Ajouter un musée</a>
+
+  <a routerLink="password" class="btn btn-secondary btn-lg">🔐 Modifier mot de passe</a>
+
+</div>

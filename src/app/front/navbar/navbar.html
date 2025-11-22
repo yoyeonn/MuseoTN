@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg modern-navbar px-4 py-2 ">
+  <a class="navbar-brand fw-bold fs-4" routerLink="/">Museo TN</a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="mainNav">
+    <ul class="navbar-nav ms-auto">
+
+      <li class="nav-item">
+        <a class="nav-link nav-modern" routerLink="/">Accueil</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link nav-modern" routerLink="/musee">Musées</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link nav-modern" routerLink="/search">Recherche</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link nav-modern" routerLink="/about">À propos</a>
+      </li>
+
+      @if (auth.isLoggedIn() && isAdminRoute()) {
+        <li class="nav-item">
+          <a class="nav-link nav-modern logout-link" (click)="logout()" style="cursor:pointer;">
+            Déconnexion
+          </a>
+        </li>
+      }
+
+    </ul>
+  </div>
+</nav>

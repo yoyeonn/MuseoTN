@@ -1,0 +1,39 @@
+<h2>{{ musee.nom }}</h2>
+<img [src]="musee.photo" class="img-fluid mb-3">
+
+<p>{{ musee.description }}</p>
+
+<p><strong>Prix d'entrée :</strong> {{ musee.prixEntree | price }}</p>
+
+<hr>
+
+<h3>Commentaires</h3>
+
+@for (c of musee.commentaires; track $index) {
+  <div class="border p-2 mb-2">
+    <strong>{{ c.nom }}</strong> - {{ c.date | date:'short' }}
+    <br>
+    {{ c.message }}
+  </div>
+}
+
+<hr>
+
+<h4>Ajouter un commentaire</h4>
+
+<form [formGroup]="commentForm" (ngSubmit)="addComment()">
+
+  <div class="mb-2">
+    <label>Nom</label>
+    <input class="form-control" formControlName="nom">
+  </div>
+
+  <div class="mb-2">
+    <label>Message</label>
+    <textarea class="form-control" formControlName="message"></textarea>
+  </div>
+
+  <button class="btn btn-primary mt-2" type="submit">
+    Ajouter
+  </button>
+</form>

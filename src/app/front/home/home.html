@@ -1,0 +1,39 @@
+<div class="page-bg">
+
+  <div class="text-center hero-section">
+    <h1 class="display-4 fw-bold">Bienvenue au Museo TN</h1>
+    <p class="lead mt-3">
+      Découvrez les plus beaux musées, monuments et sites historiques de Tunisie.
+    </p>
+
+    <app-weather-api></app-weather-api>
+
+    <a routerLink="/musee" class="btn btn-primary btn-lg mt-3">
+      Explorer les musées
+    </a>
+  </div>
+
+  <hr class="my-5">
+
+  <h2 class="text-center mb-4">Nos Musées</h2>
+
+  <div class="row g-4">
+    @for (m of musees | slice:0:3; track m.id) {
+      <div class="col-md-4">
+  <div class="museum-card">
+    <div class="museum-image-wrapper">
+      <img [src]="m.photo" class="museum-image">
+    </div>
+
+    <div class="museum-content">
+      <h5 class="museum-title">{{ m.nom }}</h5>
+      <p class="museum-description">{{ m.description | slice:0:100 }}...</p>
+
+      <a routerLink="/musee/{{ m.id }}" class="btn btn-museum">Voir plus</a>
+    </div>
+  </div>
+</div>
+    }
+  </div>
+
+</div>
