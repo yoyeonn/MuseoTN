@@ -16,7 +16,4 @@ constructor(public auth: AuthService, private router: Router) {}
     this.auth.logout();
     this.router.navigate(['/']);
   }
-  isAdminRoute(): boolean {
-  return this.router.url.startsWith('/admin');
-}
 }

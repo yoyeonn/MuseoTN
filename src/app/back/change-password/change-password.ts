@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth-service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-change-password',
   standalone: true,
@@ -12,7 +14,7 @@ export class ChangePassword {
 
   form: FormGroup;
 
-  constructor(private fb: FormBuilder, private auth: AuthService) {
+  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
     this.form = this.fb.group({
       old: ['', Validators.required],
       new1: ['', Validators.required],
@@ -32,5 +34,7 @@ export class ChangePassword {
     }
 
     alert("Mot de passe changé !");
+
+     this.router.navigate(['/admin']);
   }
 }

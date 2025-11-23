@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './login.css',
 })
 export class Login {
-errorMessage = '';
+  errorMessage = '';
 
   loginForm: any;
 

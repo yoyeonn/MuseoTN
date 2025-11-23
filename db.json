@@ -14,6 +14,11 @@
           "nom": "Achraf",
           "message": "Super musee",
           "date": "2022-01-01"
+        },
+        {
+          "nom": "aziz",
+          "message": "test",
+          "date": "2025-11-23T14:50:31.270Z"
         }
       ]
     },
@@ -107,7 +112,7 @@
         }
       ]
     },
-     {
+    {
       "id": "m7",
       "nom": "Musée de Mahdia",
       "localisation": "Mahdia",
@@ -157,18 +162,6 @@
           "date": "2024-12-05"
         }
       ]
-    }
-  ],
-  "users": [
-    {
-      "id": "A1",
-      "username": "admin1",
-      "password": "admin1"
-    },
-    {
-      "id": "A2",
-      "username": "admin2",
-      "password": "admin2"
     }
   ]
 }

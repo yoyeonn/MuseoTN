@@ -24,7 +24,10 @@
         <a class="nav-link nav-modern" routerLink="/about">À propos</a>
       </li>
 
-      @if (auth.isLoggedIn() && isAdminRoute()) {
+      @if (auth.isLoggedIn()) {
+        <li class="nav-item">
+          <a class="nav-link nav-modern" routerLink="/admin">Tableau de bord</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link nav-modern logout-link" (click)="logout()" style="cursor:pointer;">
             Déconnexion
